@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER" hgap="10" vgap="10"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="co.mizrahi.launcher.LoaderController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+    <Label text="Paste magnet link:"
+           GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="textField"
+            GridPane.columnIndex="1" GridPane.rowIndex="1" minWidth="360"/>
+    <ComboBox
+            fx:id="players" layoutX="15.0" layoutY="33.0" prefWidth="90.0" promptText="Player"
+            GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+    <HBox spacing="10" alignment="BOTTOM_LEFT"
+          GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <Button text="Choose torrent file" onAction="#onSelectFileClick"/>
+    </HBox>
+    <HBox spacing="10" alignment="BOTTOM_RIGHT"
+          GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <Button text="Play" onAction="#onPlayButtonClick"/>
+    </HBox>
+</GridPane>
